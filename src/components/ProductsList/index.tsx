@@ -8,22 +8,52 @@ type Props = {
 
 const ProductsList = ({ backgorund, title }: Props) => {
   return (
-    <Container className="container">
-      <h2>Nome da seção</h2>
-      <List>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-        <li>
-          <Product />
-        </li>
-      </List>
+    <Container $background={backgorund}>
+      <div className="container">
+        <h2>{title}</h2>
+        <List>
+          <li>
+            <Product
+              category="Ação"
+              description="teste"
+              image="//placehold.it/222x250"
+              infos={['-10%', 'R$150']}
+              title="Teste"
+              system="Windows"
+            />
+          </li>
+          <li>
+            <Product
+              category="Ação"
+              description="teste"
+              image="//placehold.it/222x250"
+              infos={['-10%', 'R$150']}
+              title="Teste"
+              system="Windows"
+            />
+          </li>
+          <li>
+            <Product
+              category="Ação"
+              description="teste"
+              image="//placehold.it/222x250"
+              infos={['-10%', 'R$150']}
+              title="Teste"
+              system="Windows"
+            />
+          </li>
+          <li>
+            <Product
+              category="Ação"
+              description="teste"
+              image="//placehold.it/222x250"
+              infos={['-10%', 'R$150']}
+              title="Teste"
+              system="Windows"
+            />
+          </li>
+        </List>
+      </div>
     </Container>
   )
 }
