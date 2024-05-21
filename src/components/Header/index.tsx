@@ -8,7 +8,9 @@ const Header = () => {
     <>
       <HeaderBar>
         <div>
-          <img src={logo} alt="Logo Eplay" />
+          <Link to={'/'}>
+            <img src={logo} alt="Logo Eplay" />
+          </Link>
           <nav>
             <Links>
               <LinkItem>
