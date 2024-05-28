@@ -6,15 +6,28 @@ type Props = {
   to?: string
   onClick?: () => void
   children: string
+  variant?: 'primary' | 'secondary'
 }
 
-const Button = ({ type, title, to, onClick, children }: Props) => {
+const Button = ({
+  type,
+  title,
+  to,
+  onClick,
+  children,
+  variant = 'primary'
+}: Props) => {
   if (type === 'link' && to != undefined) {
     return <ButtonLink to={to}>{children}</ButtonLink>
   }
 
   return (
-    <ButtonContainer type="button" title={title} onClick={onClick}>
+    <ButtonContainer
+      $variant={variant}
+      type="button"
+      title={title}
+      onClick={onClick}
+    >
       {children}
     </ButtonContainer>
   )
