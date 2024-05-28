@@ -14,7 +14,7 @@ const Header = () => {
           <nav>
             <Links>
               <LinkItem>
-                <Link to={'/categorias'}>Categorias</Link>
+                <Link to={'/categories'}>Categorias</Link>
               </LinkItem>
               <LinkItem>
                 <Link to={'#'}>Novidades</Link>
