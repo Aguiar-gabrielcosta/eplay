@@ -16,7 +16,7 @@ export const Container = styled.section<{ $background: string }>`
 export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 24px;
+  gap: 24px;
   margin-top: 40px;
 `
 
