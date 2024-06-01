@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoints, cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 
 export const Banner = styled.div<{ $bgImage: string }>`
@@ -7,11 +7,15 @@ export const Banner = styled.div<{ $bgImage: string }>`
   background-image: url(${(props) => props.$bgImage});
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100%;
   display: block;
   height: 480px;
   width: 100%;
   padding-top: 16px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    background-size: cover;
+  }
 
   &::after {
     position: absolute;

@@ -11,7 +11,7 @@ export type Game = {
   id: number
   name: string
   description: string
-  releaseDate?: string
+  release_date?: string
   prices: {
     discount?: number
     old?: number
@@ -42,8 +42,18 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <ProductsList title="Produtos" background="gray" games={onSaleGames} />
-      <ProductsList title="Em breve" background="black" games={soonGames} />
+      <ProductsList
+        title="Produtos"
+        background="gray"
+        games={onSaleGames}
+        id="on-sale"
+      />
+      <ProductsList
+        title="Em breve"
+        background="black"
+        games={soonGames}
+        id="coming-soon"
+      />
     </>
   )
 }
