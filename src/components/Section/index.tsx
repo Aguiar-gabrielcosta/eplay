@@ -1,4 +1,4 @@
-import { Container, Title } from './styles'
+import * as S from './styles'
 
 type Props = {
   title: string
@@ -8,12 +8,12 @@ type Props = {
 
 const Section = ({ title, bgColor, children }: Props) => {
   return (
-    <Container $background={bgColor}>
+    <S.Container $background={bgColor}>
       <div className="container">
-        <Title>{title}</Title>
+        <S.Title>{title}</S.Title>
         {children}
       </div>
-    </Container>
+    </S.Container>
   )
 }
 

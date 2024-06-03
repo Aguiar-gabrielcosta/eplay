@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const Row = styled.div<{ $margin?: string }>`
   display: flex;
@@ -20,10 +20,10 @@ export const InputGroup = styled.div<{ $maxWidth?: string }>`
 
   input,
   select {
-    background-color: ${cores.branca};
+    background-color: ${colors.white};
     height: 32px;
     padding: 0 8px;
-    border: 1px solid ${cores.branca};
+    border: 1px solid ${colors.white};
     width: 100%;
   }
 `
@@ -31,8 +31,9 @@ export const InputGroup = styled.div<{ $maxWidth?: string }>`
 export const TabButton = styled.button<{ $isActive: boolean }>`
   font-size: 14px;
   font-weight: bold;
-  color: ${cores.branca};
-  background-color: ${(props) => (props.$isActive ? cores.verde : cores.preta)};
+  color: ${colors.white};
+  background-color: ${(props) =>
+    props.$isActive ? colors.green : colors.black};
   height: 32px;
   border: none;
   border-radius: 8px;

@@ -1,15 +1,15 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { Card } from '../Product/styles'
 
 export const Container = styled.section<{ $background: string }>`
   background-color: ${(props) =>
-    props.$background === 'gray' ? cores.cinza : cores.preta};
+    props.$background === 'gray' ? colors.black : colors.black};
   padding: 32px 0;
 
   ${Card} {
     background-color: ${(props) =>
-      props.$background === 'gray' ? cores.preta : cores.cinza};
+      props.$background === 'gray' ? colors.black : colors.black};
   }
 
   p {

@@ -1,4 +1,4 @@
-import { ButtonContainer, ButtonLink } from './styled'
+import * as S from './styled'
 
 type Props = {
   type: 'button' | 'link'
@@ -18,18 +18,18 @@ const Button = ({
   variant = 'primary'
 }: Props) => {
   if (type === 'link' && to != undefined) {
-    return <ButtonLink to={to}>{children}</ButtonLink>
+    return <S.ButtonLink to={to}>{children}</S.ButtonLink>
   }
 
   return (
-    <ButtonContainer
+    <S.ButtonContainer
       $variant={variant}
       type="button"
       title={title}
       onClick={onClick}
     >
       {children}
-    </ButtonContainer>
+    </S.ButtonContainer>
   )
 }
 
