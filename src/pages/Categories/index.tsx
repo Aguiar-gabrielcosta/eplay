@@ -8,17 +8,15 @@ import {
 } from '../../services/api'
 
 const Categories = () => {
-  const { data: actionGames } = useGetActionGamesQuery()
-  const { data: sportGames } = useGetSportGamesQuery()
-  const { data: simulationGames } = useGetSimulationGamesQuery()
-  const { data: fightGames } = useGetFightGamesQuery()
-  const { data: rpgGames } = useGetRPGGamesQuery()
-
-  if (
-    !(actionGames && sportGames && simulationGames && fightGames && rpgGames)
-  ) {
-    return <h3>Carregando...</h3>
-  }
+  const { data: actionGames, isLoading: isLoadingAction } =
+    useGetActionGamesQuery()
+  const { data: sportGames, isLoading: isLoadingSport } =
+    useGetSportGamesQuery()
+  const { data: simulationGames, isLoading: isLoadingSimulation } =
+    useGetSimulationGamesQuery()
+  const { data: fightGames, isLoading: isLoadingFight } =
+    useGetFightGamesQuery()
+  const { data: rpgGames, isLoading: isLoadingRpg } = useGetRPGGamesQuery()
 
   return (
     <>
@@ -27,26 +25,36 @@ const Categories = () => {
         background="black"
         games={actionGames}
         id="action"
+        isLoading={isLoadingAction}
       />
       <ProductsList
         title="Esportes"
         background="gray"
         games={sportGames}
         id="sports"
+        isLoading={isLoadingSport}
       />
       <ProductsList
         title="Simulação"
         background="black"
         games={simulationGames}
         id="simulation"
+        isLoading={isLoadingSimulation}
       />
       <ProductsList
         title="Luta"
         background="gray"
         games={fightGames}
         id="fight"
+        isLoading={isLoadingFight}
       />
-      <ProductsList title="RPG" background="black" games={rpgGames} id="rpg" />
+      <ProductsList
+        title="RPG"
+        background="black"
+        games={rpgGames}
+        id="rpg"
+        isLoading={isLoadingRpg}
+      />
     </>
   )
 }

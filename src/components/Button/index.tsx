@@ -1,7 +1,7 @@
 import * as S from './styled'
 
 type Props = {
-  type: 'button' | 'link'
+  type: 'button' | 'link' | 'submit'
   title: string
   to?: string
   onClick?: () => void
@@ -24,7 +24,7 @@ const Button = ({
   return (
     <S.ButtonContainer
       $variant={variant}
-      type="button"
+      type={type === 'button' ? 'button' : 'submit'}
       title={title}
       onClick={onClick}
     >
