@@ -1,11 +1,15 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Row = styled.div<{ $margin?: string }>`
   display: flex;
   align-items: flex-end;
   column-gap: 24px;
   margin-top: ${(props) => props.$margin || '0'};
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: block;
+  }
 `
 
 export const InputGroup = styled.div<{ $maxWidth?: string }>`
@@ -31,6 +35,10 @@ export const InputGroup = styled.div<{ $maxWidth?: string }>`
       outline-color: red;
     }
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-top: 16px;
+  }
 `
 
 export const TabButton = styled.button<{ $isActive: boolean }>`
@@ -48,5 +56,10 @@ export const TabButton = styled.button<{ $isActive: boolean }>`
 
   img {
     margin-right: 8px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 100%;
+    margin-top: 8px;
   }
 `
